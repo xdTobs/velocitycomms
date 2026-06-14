@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "velocitycomms",
+  "version": "${version}",
+  "name": "velocitycomms",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/velocitycomms/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.tobs.velocitycomms.client.VelocitycommsDataGenerator"
+    ],
+    "main": [
+      "org.tobs.velocitycomms.Velocitycomms"
+    ]
+  },
+  "mixins": [
+    "velocitycomms.mixins.json",
+    {
+      "config": "velocitycomms.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
