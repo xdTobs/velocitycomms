@@ -3,6 +3,7 @@
 /build
 /.idea
 /.gradle
+/run
 
 # Compiled class file
 *.class
